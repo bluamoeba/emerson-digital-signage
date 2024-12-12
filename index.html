@@ -130,21 +130,20 @@ Home Screen Start
 		}
 
 		.heading-container h1 {
-			font-size: 2.5rem;
+			font-size: 2rem;
 			margin: 0;
 		}
 
 		.heading-container p {
-			font-size: 2rem;
+			font-size: 1.5rem;
 			margin: 5px 0 0;
+			line-height: 2rem;
 		}
 
 		.image-container {
-			padding-top: 80px;
-
 			position: relative;
 			width: 80%;
-			height: 80%;
+			height: 60%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -157,46 +156,34 @@ Home Screen Start
 			object-fit: contain;
 		}
 
-		.point {
+		.point-container {
 			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.point {
 			width: 20px;
 			height: 20px;
 			background-color: #1976d2;
 			border-radius: 50%;
 			animation: bubble 1.5s infinite;
-			cursor: pointer;
 		}
 
-		.point-container {
-			position: absolute;
-			display: flex;
-			align-items: center;
-			gap: 10px;
-		}
-
-		.point-title {
-			font-size: 14px;
+		.point-text {
+			font-size: 16px;
 			color: #1976d2;
-			white-space: nowrap;
+			margin-bottom: 10px;
+
 		}
 
-		.arrow-line {
-			width: 100px;
+		.line-container {
+			position: absolute;
+			width: 150px;
 			height: 2px;
 			background: #1976d2;
-			position: relative;
-		}
-
-		.arrow-line::after {
-			content: '';
-			position: absolute;
-			top: -4px;
-			right: 0;
-			width: 8px;
-			height: 8px;
-			border-right: 2px solid #1976d2;
-			border-bottom: 2px solid #1976d2;
-			transform: rotate(45deg);
 		}
 
 		@keyframes bubble {
@@ -270,37 +257,39 @@ Home Screen End
 							</div>
 							<div class="image-container">
 								<img src="img/valve.jpg">
-								<div class="point" style="top: 30%; left: 50%;"></div>
-								<div class="point-container" style="top: 30%; left: 60%;">
-									<div class="arrow-line"></div>
-									<div class="point-title">Point 1</div>
+								<div class="point-container" style="top: 17.5%; left: 13%;">
+
+									<div class="point-text">Optimized Digital Valve (ODV)</div>
+									<div class="point"></div>
+								</div>
+								<div class="line-container" style="top: 28%; left: 26%;"></div>
+
+								<div class="point-container" style="top: 60%; left: 10%;">
+									<div class="point"></div>
+									<div class="point-text">Point 2</div>
+								</div>
+								<div class="line-container" style="top: 60%; left: 20%;"></div>
+
+								<div class="line-container" style="top: 30%; left: 70%;"></div>
+								<div class="point-container" style="top: 30%; left: 80%;">
+									<div class="point"></div>
+									<div class="point-text">Point 3</div>
 								</div>
 
-								<div class="point" style="top: 60%; left: 30%;"></div>
-								<div class="point-container" style="top: 60%; left: 40%;">
-									<div class="arrow-line"></div>
-									<div class="point-title">Point 2</div>
+								<div class="line-container" style="top: 50%; left: 70%;"></div>
+								<div class="point-container" style="top: 50%; left: 80%;">
+									<div class="point"></div>
+									<div class="point-text">Point 4</div>
 								</div>
 
-								<div class="point" style="top: 70%; left: 70%;"></div>
+								<div class="line-container" style="top: 70%; left: 70%;"></div>
 								<div class="point-container" style="top: 70%; left: 80%;">
-									<div class="arrow-line"></div>
-									<div class="point-title">Point 3</div>
-								</div>
-
-								<div class="point" style="top: 40%; left: 20%;"></div>
-								<div class="point-container" style="top: 40%; left: 30%;">
-									<div class="arrow-line"></div>
-									<div class="point-title">Point 4</div>
-								</div>
-
-								<div class="point" style="top: 50%; left: 80%;"></div>
-								<div class="point-container" style="top: 50%; left: 90%;">
-									<div class="arrow-line"></div>
-									<div class="point-title">Point 5</div>
+									<div class="point"></div>
+									<div class="point-text">Point 5</div>
 								</div>
 							</div>
 						</div>
+
 
 
 

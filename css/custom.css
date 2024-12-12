@@ -41,6 +41,8 @@ body {
   line-height: 1.75;
   font-family: Noto Sans;
   font-size: 14px;
+  max-width: 1205px;
+  margin:auto;
 }
 
 a,
@@ -395,7 +397,8 @@ html.mfp-helper {
   height: 100%;
   overflow: hidden;
   position: absolute;
-  padding-left: 60px;
+  
+
   visibility: hidden;
 }
 

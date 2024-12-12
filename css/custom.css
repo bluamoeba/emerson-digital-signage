@@ -39,7 +39,7 @@ html {
 
 body {
   line-height: 1.75;
-  font-family: Roboto-Regular;
+  font-family: Noto Sans;
   font-size: 14px;
 }
 
@@ -60,7 +60,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 { 
-  font-family: Roboto-Bold;
+  font-family: Noto Sans;
   font-weight: 800; 
   margin-bottom: 30px; 
   line-height: 1.5; 

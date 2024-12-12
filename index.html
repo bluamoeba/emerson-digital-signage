@@ -11,7 +11,59 @@
 	<title>Emerson</title>
 
 	<style>
-		
+		@font-face {
+			font-family: 'Noto Sans';
+			src: url('webfont/NotoSans-Regular.eot');
+			src: url('webfont/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+				url('webfont/NotoSans-Regular.woff2') format('woff2'),
+				url('webfont/NotoSans-Regular.woff') format('woff'),
+				url('webfont/NotoSans-Regular.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+
+		@font-face {
+			font-family: 'Noto Sans';
+			src: url('webfont/NotoSans-Medium.eot');
+			src: url('webfont/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+				url('webfont/NotoSans-Medium.woff2') format('woff2'),
+				url('webfont/NotoSans-Medium.woff') format('woff'),
+				url('webfont/NotoSans-Medium.ttf') format('truetype');
+			font-weight: 500;
+			font-style: normal;
+			font-display: swap;
+		}
+
+
+		@font-face {
+			font-family: 'Noto Sans';
+			src: url('webfont/NotoSans-Bold.eot');
+			src: url('webfont/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+				url('webfont/NotoSans-Bold.woff2') format('woff2'),
+				url('webfont/NotoSans-Bold.woff') format('woff'),
+				url('webfont/NotoSans-Bold.ttf') format('truetype');
+			font-weight: bold;
+			font-style: normal;
+			font-display: swap;
+		}
+
+
+		@font-face {
+			font-family: 'Noto Sans';
+			src: url('webfont/NotoSans-Light.eot');
+			src: url('webfont/NotoSans-Light.eot?#iefix') format('embedded-opentype'),
+				url('webfont/NotoSans-Light.woff2') format('woff2'),
+				url('webfont/NotoSans-Light.woff') format('woff'),
+				url('webfont/NotoSans-Light.ttf') format('truetype');
+			font-weight: 300;
+			font-style: normal;
+			font-display: swap;
+		}
+
+
+
 
 
 
@@ -22,55 +74,147 @@
 
 
 
-.main-content {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-}
+		.main-content {
+			position: relative;
+			overflow: hidden;
+			height: 100vh;
+		}
 
-.home-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 
-#home-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-.logo-section {
- position: absolute;
-    bottom: 1%;
-    
-    
-    background: #0000007d;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px; /* Adds padding to the left and right */
-    border-radius: 10px;
-    max-width: 90%; /* Controls how much width the section takes */
-}
+		/*
+Home Screen Start
+ */
+		.home-icon {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			background-color: #ffffff;
+			border-radius: 50%;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			padding: 10px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    max-width: 100px;
-    max-height: 100px;
-}
+		.home-icon:hover {
+			background-color: #f0f0f0;
+		}
 
-.logo img {
-    width: 100%;
-    height: auto;
-}
+		.home-icon svg {
+			width: 35px;
+			height: 30px;
+			fill: #1976d2;
+		}
+
+
+		.main-container {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.heading-container {
+			text-align: center;
+			position: absolute;
+			top: 5%;
+
+			width: 100%;
+			color: #1976d2;
+		}
+
+		.heading-container h1 {
+			font-size: 2.5rem;
+			margin: 0;
+		}
+
+		.heading-container p {
+			font-size: 2rem;
+			margin: 5px 0 0;
+		}
+
+		.image-container {
+			padding-top: 80px;
+
+			position: relative;
+			width: 80%;
+			height: 80%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+
+		.image-container img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+
+		.point {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background-color: #1976d2;
+			border-radius: 50%;
+			animation: bubble 1.5s infinite;
+			cursor: pointer;
+		}
+
+		.point-container {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.point-title {
+			font-size: 14px;
+			color: #1976d2;
+			white-space: nowrap;
+		}
+
+		.arrow-line {
+			width: 100px;
+			height: 2px;
+			background: #1976d2;
+			position: relative;
+		}
+
+		.arrow-line::after {
+			content: '';
+			position: absolute;
+			top: -4px;
+			right: 0;
+			width: 8px;
+			height: 8px;
+			border-right: 2px solid #1976d2;
+			border-bottom: 2px solid #1976d2;
+			transform: rotate(45deg);
+		}
+
+		@keyframes bubble {
+
+			0%,
+			100% {
+				box-shadow: 0 0 0 0 rgba(25, 118, 210, 0.5), 0 0 0 20px rgba(25, 118, 210, 0);
+			}
+
+			50% {
+				box-shadow: 0 0 0 10px rgba(25, 118, 210, 0.25), 0 0 0 30px rgba(25, 118, 210, 0);
+			}
+		}
+
+
+		/*
+Home Screen End
+ */
 	</style>
 
 
@@ -82,7 +226,7 @@
 	<link href="css/jquery.fancybox.css" rel="stylesheet">
 
 	<link href="css/skins/skin5.css" rel="stylesheet">
-	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/custom.css?v=2" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,7 +238,7 @@
 
 <body>
 
-<!--
+	<!--
 	<div id="video-container">
 
 		<video id="screensaver-video"
@@ -109,92 +253,161 @@
 		<div class="container-fluid">
 			<div class="row no-gutters v-full">
 
-			
+
 				<div id="left-wrapper" class="col-12 col-lg-12">
-			
+
 					<div id="home" class="main-content">
-			
-							<div class="home-video">
-							<video id="home-video" src="video/3.mp4" autoplay muted loop></video>
+
+
+
+						<div class="main-container">
+
+
+							<div class="heading-container">
+								<h1>Fisher™ Optimized Antisurge Control Valves</h1>
+								<p>Achieve maximum compressor efficiency with valves that offer superior dynamic response, robustness,
+									and easy tuning.</p>
+							</div>
+							<div class="image-container">
+								<img src="img/valve.jpg">
+								<div class="point" style="top: 30%; left: 50%;"></div>
+								<div class="point-container" style="top: 30%; left: 60%;">
+									<div class="arrow-line"></div>
+									<div class="point-title">Point 1</div>
+								</div>
+
+								<div class="point" style="top: 60%; left: 30%;"></div>
+								<div class="point-container" style="top: 60%; left: 40%;">
+									<div class="arrow-line"></div>
+									<div class="point-title">Point 2</div>
+								</div>
+
+								<div class="point" style="top: 70%; left: 70%;"></div>
+								<div class="point-container" style="top: 70%; left: 80%;">
+									<div class="arrow-line"></div>
+									<div class="point-title">Point 3</div>
+								</div>
+
+								<div class="point" style="top: 40%; left: 20%;"></div>
+								<div class="point-container" style="top: 40%; left: 30%;">
+									<div class="arrow-line"></div>
+									<div class="point-title">Point 4</div>
+								</div>
+
+								<div class="point" style="top: 50%; left: 80%;"></div>
+								<div class="point-container" style="top: 50%; left: 90%;">
+									<div class="arrow-line"></div>
+									<div class="point-title">Point 5</div>
+								</div>
+							</div>
 						</div>
 
-						<div class="logo-section">
-							<div class="logo"><a href="#3A" class="menu-link"><img src="img/project_certainty/Project_Certainty_3A.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3B" class="menu-link"><img src="img/project_certainty/Project_Certainty_3B.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3C" class="menu-link"><img src="img/project_certainty/Project_Certainty_3C.png" alt="Logo 1"></a></div>
-							
-							
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/project_certainty/Project_Certainty_3D.png"></a></div>
-					
-						</div>
-						
+
+
+
+
+						<div class="home-icon"><a href="#3A" class="menu-link">
+
+								<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M16.25 3.75V5.43953L18.25 7.03953V3.75H16.25ZM19.75 8.23953V3.5C19.75 2.80964 19.1904 2.25 18.5 2.25H16C15.3097 2.25 14.75 2.80964 14.75 3.5V4.23953L14.3426 3.91362C12.9731 2.81796 11.027 2.81796 9.65742 3.91362L1.53151 10.4143C1.20806 10.6731 1.15562 11.1451 1.41438 11.4685C1.67313 11.792 2.1451 11.8444 2.46855 11.5857L3.25003 10.9605V21.25H2.00003C1.58581 21.25 1.25003 21.5858 1.25003 22C1.25003 22.4142 1.58581 22.75 2.00003 22.75H22C22.4142 22.75 22.75 22.4142 22.75 22C22.75 21.5858 22.4142 21.25 22 21.25H20.75V10.9605L21.5315 11.5857C21.855 11.8444 22.3269 11.792 22.5857 11.4685C22.8444 11.1451 22.792 10.6731 22.4685 10.4143L19.75 8.23953ZM19.25 9.76047L13.4056 5.08492C12.5838 4.42753 11.4162 4.42753 10.5945 5.08492L4.75003 9.76047V21.25H8.25003L8.25003 16.9506C8.24999 16.2858 8.24996 15.7129 8.31163 15.2542C8.37773 14.7625 8.52679 14.2913 8.90904 13.909C9.29128 13.5268 9.76255 13.3777 10.2542 13.3116C10.7129 13.2499 11.2858 13.25 11.9507 13.25H12.0494C12.7143 13.25 13.2871 13.2499 13.7459 13.3116C14.2375 13.3777 14.7088 13.5268 15.091 13.909C15.4733 14.2913 15.6223 14.7625 15.6884 15.2542C15.7501 15.7129 15.7501 16.2858 15.75 16.9506L15.75 21.25H19.25V9.76047ZM14.25 21.25V17C14.25 16.2717 14.2484 15.8009 14.2018 15.454C14.1581 15.1287 14.0875 15.0268 14.0304 14.9697C13.9733 14.9126 13.8713 14.842 13.546 14.7982C13.1991 14.7516 12.7283 14.75 12 14.75C11.2717 14.75 10.8009 14.7516 10.4541 14.7982C10.1288 14.842 10.0268 14.9126 9.9697 14.9697C9.9126 15.0268 9.84199 15.1287 9.79826 15.454C9.75162 15.8009 9.75003 16.2717 9.75003 17V21.25H14.25ZM12 8.25C11.3097 8.25 10.75 8.80964 10.75 9.5C10.75 10.1904 11.3097 10.75 12 10.75C12.6904 10.75 13.25 10.1904 13.25 9.5C13.25 8.80964 12.6904 8.25 12 8.25ZM9.25003 9.5C9.25003 7.98122 10.4812 6.75 12 6.75C13.5188 6.75 14.75 7.98122 14.75 9.5C14.75 11.0188 13.5188 12.25 12 12.25C10.4812 12.25 9.25003 11.0188 9.25003 9.5Z"
+										fill="#1976d2" />
+								</svg>
+							</a></div>
+
+
 
 					</div>
 
 
-<!-- 3A -->
+					<!-- 3A -->
 
 
-		<div id="3A" class="main-content">
-			
-							<div class="home-video">
+					<div id="3A" class="main-content">
+
+						<div class="home-video">
 							<video id="home-video" src="video/3A.mp4" autoplay muted loop></video>
 						</div>
 
 						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/Engineering_Detailed_Design/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3A1" class="menu-link"><img src="img/Engineering_Detailed_Design/Project_Certainty_3A1.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3A2" class="menu-link"><img src="img/Engineering_Detailed_Design/Project_Certainty_3A2.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3A3" class="menu-link"><img src="img/Engineering_Detailed_Design/Project_Certainty_3A3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3A4" class="menu-link"><img src="img/Engineering_Detailed_Design/Project_Certainty_3A4.png" alt="Logo 1"></a></div>
-							
-							
+							<div class="logo"><a href="#home" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/Project_Certainty_3.png" alt="Logo 1"></a></div>
+							<div class="logo"><a href="#3A1" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/Project_Certainty_3A1.png" alt="Logo 1"></a></div>
+							<div class="logo"><a href="#3A2" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/Project_Certainty_3A2.png" alt="Logo 1"></a></div>
+							<div class="logo"><a href="#3A3" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/Project_Certainty_3A3.png" alt="Logo 1"></a></div>
+							<div class="logo"><a href="#3A4" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/Project_Certainty_3A4.png" alt="Logo 1"></a></div>
+
+
 							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/Engineering_Detailed_Design/Project_Certainty_3D.png"></a></div>
-					
+									data-src="video/3D.mp4" href="javascript:;"><img style=""
+										src="img/Engineering_Detailed_Design/Project_Certainty_3D.png"></a></div>
+
 						</div>
-						
+
 
 					</div>
-<!-- 3A -->
+					<!-- 3A -->
 
 
 
 
 
 
-<!-- 3A1 -->
+					<!-- 3A1 -->
 
 
-		<div id="3A1" class="main-content">
-			
-							<div class="home-video">
+					<div id="3A1" class="main-content">
+
+						<div class="home-video">
 							<video id="home-video" src="video/3A.mp4" autoplay muted loop></video>
 						</div>
 
 						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3A" class="menu-link"><img src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A1R1.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R1.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A1R2.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R2.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A1R3.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A1R4.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R4.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A1R5.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R5.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A1R6.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R6.png" alt="Logo 1"></a></div>
-							
-							
+							<div class="logo"><a href="#home" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a href="#3A" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A.png"
+										alt="Logo 1"></a></div>
 							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3D.png"></a></div>
-					
+									data-src="video/3A1R1.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R1.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A1R2.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R2.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A1R3.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R3.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A1R4.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R4.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A1R5.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R5.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A1R6.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3A1-R6.png"
+										alt="Logo 1"></a></div>
+
+
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3D.mp4" href="javascript:;"><img style=""
+										src="img/Engineering_Detailed_Design/reduce_project_footprint/Project_Certainty_3D.png"></a></div>
+
 						</div>
-						
+
 
 					</div>
-<!-- 3A1 -->
+					<!-- 3A1 -->
 
 
 
@@ -203,308 +416,98 @@
 
 
 
-<!-- 3A2 -->
+					<!-- 3A2 -->
 
 
-		<div id="3A2" class="main-content">
-			
-							<div class="home-video">
+					<div id="3A2" class="main-content">
+
+						<div class="home-video">
 							<video id="home-video" src="video/3A2R1.mp4" autoplay muted loop></video>
 						</div>
 
 						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3A" class="menu-link"><img src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A2R1.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R1.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A2R2.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R2.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A2R3.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A2R4.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R4.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A2R5.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R5.png" alt="Logo 1"></a></div>
-
-							
-							
+							<div class="logo"><a href="#home" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a href="#3A" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A.png"
+										alt="Logo 1"></a></div>
 							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3D.png"></a></div>
-					
+									data-src="video/3A2R1.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R1.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A2R2.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R2.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A2R3.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R3.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A2R4.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R4.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3A2R5.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3A2-R5.png"
+										alt="Logo 1"></a></div>
+
+
+
+							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
+									data-src="video/3D.mp4" href="javascript:;"><img style=""
+										src="img/Engineering_Detailed_Design/simplify_engineering_practices/Project_Certainty_3D.png"></a>
+							</div>
+
 						</div>
-						
+
 
 					</div>
-<!-- 3A2 -->
+					<!-- 3A2 -->
 
 
 
 
 
 
-<!-- 3A3 -->
+					<!-- 3A3 -->
 
 
-		<div id="3A3" class="main-content">
-			
-							<div class="home-video">
+					<div id="3A3" class="main-content">
+
+						<div class="home-video">
 							<video id="home-video" src="video/3A3R1.mp4" autoplay muted loop></video>
 						</div>
 
 						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3A" class="menu-link"><img src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3A.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A3R1.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3A3-R1.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A3R2.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3A3-R2.png" alt="Logo 1"></a></div>
-											
-							
+							<div class="logo"><a href="#home" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3.png"
+										alt="Logo 1"></a></div>
+							<div class="logo"><a href="#3A" class="menu-link"><img
+										src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3A.png"
+										alt="Logo 1"></a></div>
 							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3D.png"></a></div>
-					
-						</div>
-						
-
-					</div>
-<!-- 3A3 -->
-
-
-
-
-
-<!-- 3A4 -->
-
-
-		<div id="3A4" class="main-content">
-			
-							<div class="home-video">
-							<video id="home-video" src="video/3A4R1.mp4" autoplay muted loop></video>
-						</div>
-
-						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/Engineering_Detailed_Design/sustainable_plant_design/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3A" class="menu-link"><img src="img/Engineering_Detailed_Design/sustainable_plant_design/Project_Certainty_3A.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A4R1.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/sustainable_plant_design/Project_Certainty_3A4-R1.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A4R2.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/sustainable_plant_design/Project_Certainty_3A4-R2.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A4R3.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/sustainable_plant_design/Project_Certainty_3A4-R3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A4R4.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/sustainable_plant_design/Project_Certainty_3A4-R4.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3A4R5.mp4" href="javascript:;"><img src="img/Engineering_Detailed_Design/sustainable_plant_design/Project_Certainty_3A4-R5.png" alt="Logo 1"></a></div>
-											
-											
-							
+									data-src="video/3A3R1.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3A3-R1.png"
+										alt="Logo 1"></a></div>
 							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/Engineering_Detailed_Design/sustainable_plant_design/Project_Certainty_3D.png"></a></div>
-					
-						</div>
-						
-
-					</div>
-<!-- 3A4 -->
+									data-src="video/3A3R2.mp4" href="javascript:;"><img
+										src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3A3-R2.png"
+										alt="Logo 1"></a></div>
 
 
-
-
-
-<!-- 3B -->
-
-
-		<div id="3B" class="main-content">
-			
-							<div class="home-video">
-							<video id="home-video" src="video/3B.mp4" autoplay muted loop></video>
-						</div>
-
-						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/project_execution/Project_Certainty_3.png" alt="Logo 1"></a></div>
-			
-							<div class="logo"><a href="#3B1" class="menu-link"><img src="img/project_execution/Project_Certainty_3B1-R1.png" alt="Logo 1"></a></div>
-								<div class="logo"><a href="#3B2" class="menu-link"><img src="img/project_execution/Project_Certainty_3B2-R2.png" alt="Logo 1"></a></div>
-				
-							
 							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/project_execution/Project_Certainty_3D.png"></a></div>
-					
+									data-src="video/3D.mp4" href="javascript:;"><img style=""
+										src="img/Engineering_Detailed_Design/optimize_lifecycle_management/Project_Certainty_3D.png"></a>
+							</div>
+
 						</div>
-						
+
 
 					</div>
-<!-- 3B -->
+					<!-- 3A3 -->
 
-
-
- 
-
-<!-- 3B1 -->
-
-
-		<div id="3B1" class="main-content">
-			
-							<div class="home-video">
-							<video id="home-video" src="video/3B1R1.mp4" autoplay muted loop></video>
-						</div>
-
-						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3B" class="menu-link"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B1R1.mp4" href="javascript:;"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B1-R1.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B1R2.mp4" href="javascript:;"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B1-R2.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B1R3.mp4" href="javascript:;"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B1-R3.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B1R4.mp4" href="javascript:;"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B1-R4.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B1R5.mp4" href="javascript:;"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B1-R5.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B1R6.mp4" href="javascript:;"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B1-R6.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B1R7.mp4" href="javascript:;"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B1-R7.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B1R8.mp4" href="javascript:;"><img src="img/project_execution/project_schedule_improvement/Project_Certainty_3B1-R8.png" alt="Logo 1"></a></div>
-				
-							
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/project_execution/project_schedule_improvement/Project_Certainty_3D.png"></a></div>
-					
-						</div>
-						
-
-					</div>
-<!-- 3B1 -->
-
-<!-- 3B2 -->
-
-
-		<div id="3B2" class="main-content">
-			
-							<div class="home-video">
-							<video id="home-video" src="video/3B2R1.mp4" autoplay muted loop></video>
-						</div>
-
-						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/project_execution/project_cost_optimization/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3B" class="menu-link"><img src="img/project_execution/project_cost_optimization/Project_Certainty_3B.png" alt="Logo 1"></a></div>
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B2R1.mp4" href="javascript:;"><img src="img/project_execution/project_cost_optimization/Project_Certainty_3B2-R1.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B2R2.mp4" href="javascript:;"><img src="img/project_execution/project_cost_optimization/Project_Certainty_3B2-R2.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B2R3.mp4" href="javascript:;"><img src="img/project_execution/project_cost_optimization/Project_Certainty_3B2-R3.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B2R4.mp4" href="javascript:;"><img src="img/project_execution/project_cost_optimization/Project_Certainty_3B2-R4.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B2R5.mp4" href="javascript:;"><img src="img/project_execution/project_cost_optimization/Project_Certainty_3B2-R5.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3B2R6.mp4" href="javascript:;"><img src="img/project_execution/project_cost_optimization/Project_Certainty_3B2-R6.png" alt="Logo 1"></a></div>
-				
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/project_execution/project_cost_optimization/Project_Certainty_3D.png"></a></div>
-					
-						</div>
-						
-
-					</div>
-<!-- 3B2 -->
-
-
-
-
-
-
-<!-- 3C -->
-
-
-		<div id="3C" class="main-content">
-			
-							<div class="home-video">
-							<video id="home-video" src="video/3C.mp4" autoplay muted loop></video>
-						</div>
-
-						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/Project_Owner/Project_Certainty_3.png" alt="Logo 1"></a></div>
-				
-							<div class="logo"><a href="#3C1" class="menu-link"><img src="img/Project_Owner/Project_Certainty_3C1-R1.png" alt="Logo 1"></a></div>
-								<div class="logo"><a href="#3C2" class="menu-link"><img src="img/Project_Owner/Project_Certainty_3C2-R2.png" alt="Logo 1"></a></div>
-				
-							
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/Project_Owner/Project_Certainty_3D.png"></a></div>
-					
-						</div>
-						
-
-					</div>
-<!-- 3C -->
-
-
-
-
-<!-- 3C1 -->
-
-
-		<div id="3C1" class="main-content">
-			
-							<div class="home-video">
-							<video id="home-video" src="video/3C.mp4" autoplay muted loop></video>
-						</div>
-
-						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3C" class="menu-link"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3C.png" alt="Logo 1"></a></div>
-				
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C1R1.mp4" href="javascript:;"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3C1-R1.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C1R2.mp4" href="javascript:;"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3C1-R2.png" alt="Logo 1"></a></div>
-					<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C1R3.mp4" href="javascript:;"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3C1-R3.png" alt="Logo 1"></a></div>
-					<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C1R4.mp4" href="javascript:;"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3C1-R4.png" alt="Logo 1"></a></div>
-					<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C1R5.mp4" href="javascript:;"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3C1-R5.png" alt="Logo 1"></a></div>
-					<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C1R6.mp4" href="javascript:;"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3C1-R6.png" alt="Logo 1"></a></div>
-					<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C1R7.mp4" href="javascript:;"><img src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3C1-R7.png" alt="Logo 1"></a></div>
-				
-							
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true"
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/Project_Owner/Derisking_Project_Outcomes/Project_Certainty_3D.png"></a></div>
-					
-						</div>
-						
-
-					</div>
-<!-- 3C1 -->
-
-
-
-<!-- 3C2 -->
-
-
-		<div id="3C2" class="main-content">
-			
-							<div class="home-video">
-							<video id="home-video" src="video/3C.mp4" autoplay muted loop></video>
-						</div>
-
-						<div class="logo-section">
-							<div class="logo"><a href="#home" class="menu-link"><img src="img/Project_Owner/Future_Ready_Project_Design/Project_Certainty_3.png" alt="Logo 1"></a></div>
-							<div class="logo"><a href="#3C" class="menu-link"><img src="img/Project_Owner/Future_Ready_Project_Design/Project_Certainty_3C.png" alt="Logo 1"></a></div>
-				
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C2R1.mp4" href="javascript:;"><img src="img/Project_Owner/Future_Ready_Project_Design/Project_Certainty_3C2-R1.png" alt="Logo 1"></a></div>
-								<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C2R2.mp4" href="javascript:;"><img src="img/Project_Owner/Future_Ready_Project_Design/Project_Certainty_3C2-R2.png" alt="Logo 1"></a></div>
-					<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C2R3.mp4" href="javascript:;"><img src="img/Project_Owner/Future_Ready_Project_Design/Project_Certainty_3C2-R3.png" alt="Logo 1"></a></div>
-					<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" data-src="video/3C2R4.mp4" href="javascript:;"><img src="img/Project_Owner/Future_Ready_Project_Design/Project_Certainty_3C2-R4.png" alt="Logo 1"></a></div>
-
-				
-							
-							<div class="logo"><a data-fancybox data-small-btn="true" data-type="video" data-loop="true" 
-													data-src="video/3D.mp4"
-													href="javascript:;"><img style="" src="img/Project_Owner/Future_Ready_Project_Design/Project_Certainty_3D.png"></a></div>
-					
-						</div>
-						
-
-					</div>
-<!-- 3C2 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-				
-				
 
 
 

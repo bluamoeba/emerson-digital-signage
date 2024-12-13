@@ -417,8 +417,8 @@ body.compensate-for-scrollbar {
     opacity: 1;
     padding: 4px;
     position: absolute;
+    top: -46px;
     right: -50px;
-    left: -44px;
     z-index: 401;
 	    border: 2px solid #ffffff;
     border-radius: 50%;

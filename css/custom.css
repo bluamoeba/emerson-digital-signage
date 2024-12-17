@@ -38,6 +38,15 @@ html {
 }
 
 body {
+
+
+  z-index: 1000;
+  width: 100%;
+height: 100%;
+background-image: url(../img/home_bg.jpg);
+background-repeat: repeat-y;
+background-position: center center;
+background-size: cover;
   line-height: 1.75;
   font-family: Noto Sans;
   font-size: 14px;
@@ -400,6 +409,7 @@ html.mfp-helper {
   
 
   visibility: hidden;
+  overflow-y: auto;
 }
 
 .main-content.active {
@@ -598,84 +608,16 @@ html.mfp-helper {
 /* [ 3.1.2. Main Content - Home ]                                  */
 /*=================================================================*/
 
-.main-content#home {
+.bg{
   z-index: 1000;
         width: 100%;
     height: 100%;
-    background-image: url(../img/homeBG.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../img/home_bg.jpg);
+    background-repeat: repeat-y;
     background-position: center center;
     background-size: cover;
 }
 
-.main-content#step1 {
-  z-index: 1000;
-        width: 100%;
-    height: 100%;
-    background-image: url(../img/step1BG.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-.main-content#step2 {
-  z-index: 1000;
-        width: 100%;
-    height: 100%;
-    background-image: url(../img/step2BG.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-.main-content#step3 {
-  z-index: 1000;
-        width: 100%;
-    height: 100%;
-    background-image: url(../img/step3BG.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-
-.main-content#step4 {
-  z-index: 1000;
-        width: 100%;
-    height: 100%;
-    background-image: url(../img/step4BG.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-.main-content#step5 {
-  z-index: 1000;
-        width: 100%;
-    height: 100%;
-    background-image: url(../img/step4BG.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-
-.main-content#step6 {
-  z-index: 1000;
-        width: 100%;
-    height: 100%;
-    background-image: url(../img/step4BG.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-.main-content#step7 {
-  z-index: 1000;
-        width: 100%;
-    height: 100%;
-    background-image: url(../img/step4BG.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
 .main-content#home .inner-content .head-content {
   height: -webkit-calc((60px * 2) + 15px + (2.369em + 1.333em) - 6px);
   height: -moz-calc((60px * 2) + 15px + (2.369em + 1.333em) - 6px);
@@ -2107,7 +2049,7 @@ html.mfp-helper {
   }
 
   .main-content {
-    padding-right: 80px;
+
   }
 
   .main-content .close-menu-link {

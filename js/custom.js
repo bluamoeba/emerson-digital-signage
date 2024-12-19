@@ -9,7 +9,7 @@
 
 	// Init Main Content
 	metronal.mainContent = {
-		list: ["#home","#odv","#odv-1","#odv-2","#odv-3","#odv-4","#odv-5","#odv-6","#anw","#anw-1", "#anw-2", "#anw-3", "#anw-4", "#anw-5", "#anw-6"],
+		list: ["#home","#odv","#odv-1","#odv-2","#odv-3","#odv-4","#odv-5","#odv-6","#anw","#anw-1", "#anw-2", "#anw-3", "#anw-4", "#anw-5", "#anw-6", "#ssb", "#ed", "#ee"],
 		on: "",
 		off: ""
 	};

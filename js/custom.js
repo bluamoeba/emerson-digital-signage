@@ -114,7 +114,7 @@
 	$(document).ready(function() {
 		metronal.dynamicPage(undefined, window.location.hash),
 		metronal.replaceVHeight();
-
+/*
  $('a').on('click', function() {
         $('.home-video video').each(function() {
             var videoElement = this; // Reference to the current video element
@@ -139,7 +139,7 @@
         });
     });
 
-	
+	 */
 /*
 
 		var idleTime = 0;
